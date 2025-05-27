@@ -4,41 +4,41 @@ export const apps = [
 
   {
     name: 'Calculator',
-    imagePath: '../../images/calculator.png',
+    imagePath: 'images/calculator.png',
     openFunc: calculatorUnlock
     }, {
     name: 'Crunchyroll',
-    imagePath: '../../images/crunchyroll.png',
+    imagePath: 'images/crunchyroll.png',
   }, {
     name: 'Camera',
-    imagePath: '../../images/camera.png',
+    imagePath: 'images/camera.png',
   }, {
     name: 'Chrome',
-    imagePath: '../../images/google-chrome.png',
+    imagePath: 'images/google-chrome.png',
   }, {
     name: 'Instagram',
-    imagePath: '../../images/instagram.webp',
+    imagePath: 'images/instagram.webp',
   }, {
     name: 'Snapchat',
-    imagePath: '../../images/snapchat.webp',
+    imagePath: 'images/snapchat.webp',
   }, {
     name: 'TikTok',
-    imagePath: '../../images/tiktok.webp',
+    imagePath: 'images/tiktok.webp',
   }, {
     name: 'Whatsapp',
-    imagePath: '../../images/whatsapp.png',
+    imagePath: 'images/whatsapp.png',
   }, {
     name: 'Youtube',
-    imagePath: '../../images/youtube.png',
+    imagePath: 'images/youtube.png',
   }, {
     name: 'Netflix',
-    imagePath: '../../images/netflix.jpg',
+    imagePath: 'images/netflix.jpg',
   }, {
     name: 'Notepad',
-    imagePath: '../../images/notepad.png',
+    imagePath: 'images/notepad.png',
     openFunc: notepadUnlock
   }, {
     name: 'Gmail',
-    imagePath: '../../images/gmail.jpg',
+    imagePath: 'images/gmail.jpg',
   }
 ]
