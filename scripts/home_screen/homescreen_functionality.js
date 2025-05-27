@@ -13,7 +13,7 @@ export function activateHomescreenFunctionality() {
 export function homescreenUnlock() {
   constants.currentScreen = 'homescreen';
   setDisplay(phoneHomescreenContent, 'initial');
-  wallpaperEl.src = '../images/wallpaper-3.jpeg';
+  wallpaperEl.src = '../../images/wallpaper-3.jpeg';
   unlockAnimation(homescreenAppGrid);
 }
 
