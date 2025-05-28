@@ -16,9 +16,12 @@ export function activateLockscreenFunctionality() {
 
   // Swipe functionality
   phoneLockscreenContent.addEventListener('mousedown', startSwipeTracking);
+  phoneLockscreenContent.addEventListener('touchstart', startSwipeTracking);
   // Reset opacity and stop tracking if mouse leaves phone screen
   phoneLockscreenContent.addEventListener('mouseleave', stopTrackingOnLeave);
+  phoneLockscreenContent.addEventListener('touchcancel', stopTrackingOnLeave);
   phoneLockscreenContent.addEventListener('mouseup', endSwipeTracking);
+  phoneLockscreenContent.addEventListener('touchend', endSwipeTracking);
 }
 
 export function lockscreenLock() {
