@@ -3,7 +3,7 @@
     transform: scale(.5);
   }
   #pointer {
-    display: none;
+    display: none !important;
   }
 }
 main .phone-content {
