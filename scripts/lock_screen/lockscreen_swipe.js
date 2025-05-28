@@ -38,14 +38,14 @@ export function startSwipeTracking(e) {
   initialY = e.clientY;
 
   // Compare on each mouse move
-  phoneLockscreenContent.addEventListener('mousemove', changeLockscreenOpacity)
+  phoneLockscreenContent.addEventListener('pointermove', changeLockscreenOpacity)
 }
 
 // Reset opacity and stop tracking if mouse leaves phone screen
 
 export function stopTrackingOnLeave() {
   phoneLockscreenContent.style.opacity = 1;
-  phoneLockscreenContent.removeEventListener('mousemove', changeLockscreenOpacity);
+  phoneLockscreenContent.removeEventListener('pointermove', changeLockscreenOpacity);
 }
 
 // On mouse release, unlock if swipe distance >= 300px
