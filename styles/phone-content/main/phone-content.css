@@ -2,6 +2,9 @@
   #phone {
     transform: scale(.75);
   }
+  #pointer {
+    display: none;
+  }
 }
 main .phone-content {
   position: relative;
