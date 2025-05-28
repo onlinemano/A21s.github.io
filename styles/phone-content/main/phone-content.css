@@ -7,9 +7,11 @@ main .phone-content {
   padding: 1.5rem 1.5rem 0 2rem;
   overflow: hidden;
   transition: .2s;
+  touch-action: none;
 }
 main .phone-content .secondary-phone-content {
   transition: .2s;
+  touch-action: none;
 }
 main .phone-content-app {
   padding: 0;
