@@ -32,6 +32,7 @@ function changeLockscreenOpacity(e) {
 }
 
 export function startSwipeTracking(e) {
+  e.preventDefault();
   // Save initial mouse position on press
   initialX = e.clientX;
   initialY = e.clientY;
