@@ -1,6 +1,6 @@
 @media screen and (max-width: 750px) {
   #phone {
-    transform: scale(.5);
+    transform: scale(.75);
   }
   #pointer {
     display: none !important;
