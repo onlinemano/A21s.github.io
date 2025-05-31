@@ -20,6 +20,7 @@ for (let i = 0; i < notes.length; i++) {
   const note = notes[i];
   if (isEmpty(note.title) && isEmpty(note.text)) {
     deleteNote(note.id);
+    saveMainId()
   }
 }
 saveNotes();
@@ -194,6 +195,8 @@ createNoteButton.addEventListener('click', () => {
 editNoteBack.addEventListener('click', () => {
   if (editorCreate) {
     deleteNote(mainId-1);
+    saveNotes();
+    rerenderNotes();
   } 
   closeEditPage();
 })
