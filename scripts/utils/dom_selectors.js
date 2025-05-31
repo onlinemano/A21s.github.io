@@ -19,3 +19,6 @@ export function setDisplay(el, display) {
     console.error('Display property not valid');
   }
 }
+export function createElement(el) {
+  return document.createElement(el);
+}
