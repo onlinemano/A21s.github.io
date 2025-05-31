@@ -253,17 +253,17 @@
   opacity: .75;
 }
 #secondary-notepad-screen .note-select-background .background-container #background-1 {
-  background-image: url('images/notepad-wallpapers/wallpaper-1.jpeg');
+  background-image: url('/images/notepad-wallpapers/wallpaper-1.jpeg');
 }
 #secondary-notepad-screen .note-select-background .background-container #background-2 {
-  background-image: url('images/notepad-wallpapers/wallpaper-2.jpeg');
+  background-image: url('/images/notepad-wallpapers/wallpaper-2.jpeg');
 }
 #secondary-notepad-screen .note-select-background .background-container #background-3 {
-  background-image: url('images/notepad-wallpapers/wallpaper-3.jpeg');
+  background-image: url('/images/notepad-wallpapers/wallpaper-3.jpeg');
 }
 #secondary-notepad-screen .note-select-background .background-container #background-4 {
-  background-image: url('images/notepad-wallpapers/wallpaper-4.jpeg');
+  background-image: url('/images/notepad-wallpapers/wallpaper-4.jpeg');
 }
 #secondary-notepad-screen .note-select-background .background-container #background-5 {
-  background-image: url('images/notepad-wallpapers/wallpaper-5.jpeg');
+  background-image: url('/images/notepad-wallpapers/wallpaper-5.jpeg');
 }
