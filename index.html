@@ -163,7 +163,49 @@
     
     <section class="phone-content phone-content-app d-n" id="notepad-screen">
       <div id="secondary-notepad-screen" class="secondary-phone-content secondary-phone-content-app">
-
+        <section class="list-grid-container">
+          <button class="select-list-grid">
+            <i class='bx  bx-list-ul bx-spin'></i> 
+          </button>
+        </section>
+        <section class="notes-search-container">
+          <i class='bx  bx-search search-icon'></i> 
+          <input type="text" placeholder="Search">
+        </section>
+        <h1>Today</h1>
+        <section class="notes-container"></section>
+        <section class="note-edit note-create-edit">
+          <header>
+            <div class="note-create-edit-header-left">
+              <button id="note-edit-back">
+                <i class='bx  bx-caret-left'></i> 
+              </button>
+              <span>Notes</span>
+            </div>
+            <div class="note-create-edit-header-right">
+              <button id="note-edit-options">
+                <i class='bx  bx-dots-vertical-rounded'></i> 
+              </button>
+              <button id="note-edit-check">
+                <i class='bx  bx-check'></i> 
+              </button>
+            </div>
+          </header>
+          <main class="note-create-edit-input-fields">
+            <textarea placeholder="Title" rows="1" id="note-edit-input-title"></textarea>
+            <textarea placeholder="Note something down" rows="20" id="note-edit-input-text"></textarea>
+          </main>
+        </section>
+        <section class="note-select-background">
+          <div class="background-container">
+            <button class="background-option" id="background-1" tabindex="-1"></button>
+            <button class="background-option" id="background-2" tabindex="-1"></button>
+            <button class="background-option" id="background-3" tabindex="-1"></button>
+            <button class="background-option" id="background-4" tabindex="-1"></button>
+            <button class="background-option" id="background-5" tabindex="-1"></button>
+          </div>
+        </section>
+        <button class="add-note"><i class='bx  bx-plus'></i> </button>
       </div>
     </section>
   </main>
