@@ -194,6 +194,7 @@ editNoteBack.addEventListener('click', () => {
 editNoteCheck.addEventListener('click', () => {
   editNote(editorId);
   saveNotes();
+  closeEditPage();
 })
 
 
