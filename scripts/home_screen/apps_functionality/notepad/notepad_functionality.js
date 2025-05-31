@@ -17,6 +17,7 @@ const editNoteText = getElById('note-edit-input-text');
 
 let mainId = parseInt(localStorage.getItem('mainId')) || 0;
 let editorId = null;
+let editorCreate = false;
 
 // Set the maximum visible length for the title length and text length
 let maxLen = 20;
@@ -129,7 +130,7 @@ function openEditNote(id) {
 
 // Remove note from the DOM, then from the notes array
 function deleteNote(id) {
-  document.getElementById(`article-${id}`).remove();
+  document.getElementById(`article-${id}`)?.remove();
   saveMainId('subtract');
   for (let i = 0; i < notes.length; i++) {
     const note = notes[i];
@@ -139,7 +140,6 @@ function deleteNote(id) {
     }
     if (note.id > id) note.id--;
   }
-  
 }
 
 // Check if corresponding id is in the DOM, if not add it.
@@ -177,24 +177,23 @@ function editNote(id) {
 }
 
 createNoteButton.addEventListener('click', () => {
+  editorCreate = true;
   addNote(mainId, editNoteTitle.value, getTime(), editNoteText.value);
   openEditNote(mainId-1);
   editNoteTitle.focus();
 });
 
 editNoteBack.addEventListener('click', () => {
-  closeOptions();
-  clearTextareas();
-  noteEditPage.classList.remove('note-create-edit-active');
+  if (editorCreate) {
+    deleteNote(mainId-1);
+  } 
+  closeEditPage();
 })
 
 
 editNoteCheck.addEventListener('click', () => {
   editNote(editorId);
   saveNotes();
-  closeOptions();
-  clearTextareas();
-  noteEditPage.classList.remove('note-create-edit-active');
 })
 
 
@@ -211,6 +210,12 @@ function cutString(str, maxLen) {
   }
 }
 
+function closeEditPage() {
+  closeOptions();
+  clearTextareas();
+  noteEditPage.classList.remove('note-create-edit-active');
+  editorCreate = false;
+}
 
 function clearTextareas() {
   editNoteTitle.value = '';
