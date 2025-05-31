@@ -14,8 +14,16 @@ const editNoteOptions = getElById('note-edit-options');
 const editNoteTitle = getElById('note-edit-input-title');
 const editNoteText = getElById('note-edit-input-text');
 
-
 let mainId = parseInt(localStorage.getItem('mainId')) || 0;
+saveNotes();
+for (let i = 0; i < notes.length; i++) {
+  const note = notes[i];
+  if (isEmpty(note.title) && isEmpty(note.text)) {
+    deleteNote(note.id);
+  }
+}
+saveNotes();
+
 let editorId = null;
 let editorCreate = false;
 
@@ -263,7 +271,7 @@ document.querySelectorAll('.background-option').forEach(bg => {
 function toggleListGrid() {
   const grid = 'notes-container-grid';
   if (notesContainer.classList.contains(grid)) {
-    selectListGrid.innerHTML = `<i class='bx  bx-list-ul bx-spin'></i>`;
+    selectListGrid.innerHTML = `<i class='bx  bx-list-ul'></i>`;
     notesContainer.style.opacity = 0;
     setTimeout(() => {
       notesContainer.style.opacity = '';
@@ -272,7 +280,7 @@ function toggleListGrid() {
       notesContainer.classList.remove(grid);
     }, 250)
   } else {  
-    selectListGrid.innerHTML = `<i class='bx  bxs-grid bx-spin'></i> `;
+    selectListGrid.innerHTML = `<i class='bx  bxs-grid'></i> `;
     notesContainer.style.opacity = 0;
     setTimeout(() => {
       notesContainer.style.opacity = '';
