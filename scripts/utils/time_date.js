@@ -1,4 +1,4 @@
-function getTime() {
+export function getTime() {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
